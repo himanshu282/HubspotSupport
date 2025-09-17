@@ -1,33 +1,21 @@
-import extensions.api
-import extensions.implementation
 
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
-    id("org.jetbrains.kotlin.plugin.serialization")
+    id("org.jetbrains.kotlin.plugin.serialization") version "2.0.21"
     id("kotlin-parcelize")
+    id("org.jetbrains.kotlin.plugin.compose") version "2.0.21"
 }
 
 android {
     namespace = "com.core.coreSupport"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         minSdk = 24
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
-    }
-    buildTypes {
-        flavorDimensions += "environment"
-        productFlavors {
-            create("staging") {
-            }
-            create("dev") {
-            }
-            create("prod") {
-            }
-        }
     }
 
     compileOptions {
@@ -42,10 +30,6 @@ android {
         buildFeatures {
             buildConfig = true
             compose = true
-        }
-        composeOptions {
-            val composeVersion = "1.5.15"
-            kotlinCompilerExtensionVersion = composeVersion
         }
     }
 }
