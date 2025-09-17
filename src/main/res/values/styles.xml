@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.SupportDialog" parent="Theme.Material3.Light.Dialog">
+        <!-- Optional tweaks -->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+
+    <style name="Theme.SupportFullScreen" parent="Theme.Material3.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+</resources>
+
